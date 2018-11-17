@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import sun from './images/sun.svg';
+import mercury from './images/Mercury.svg';
+import venus from './images/Venus.svg';
+import earth from './images/Earth.svg';
+import mars from './images/mars.svg';
+import jupiter from './images/jupiter.svg';
+import saturn from './images/saturn.svg';
+import uranus from './images/Uranus.svg';
+import neptune from './images/neptune.svg';
+import spaceflame from './images/spaceshipFlame.svg';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+
+        <div className="container">
+          <div className="ship">
+            <img src={spaceflame}/>
+          </div>
+          <ul className="planets">
+            <button><li><img src={mercury}/>Mercury</li></button>
+            <button><li><img src={venus}/>Venus</li></button>
+            <button><li><img src={earth}/>Earth</li></button>
+            <button><li><img src={mars}/>Mars</li></button>
+            <button><li><img src={jupiter}/>Jupiter</li></button>
+            <button><li><img src={saturn}/>Saturn</li></button>
+            <button><li><img src={uranus}/>Uranus</li></button>
+            <button><li><img src={neptune}/>Neptune</li></button>
+          </ul>
+          <div className="sun">
+            <img src={sun}/>
+          </div>
+        </div>
       </div>
     );
   }

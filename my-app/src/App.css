@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+
 .App {
   text-align: center;
 }
@@ -7,8 +9,8 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
+.container {
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +18,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Arvo', serif;
+}
+.ship {
+  width: 120px;
+}
+.sun {
+  width: 640px;
+  align-self: flex-start;
+  overflow: hidden;
+
+}
+.planets {
+  list-style-type: none;
+}
+.planets li img {
+  width: 160px;
+}
+.planets li {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Arvo', serif;
+  font-weight: 600;
+}
+.planets button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .App-link {
