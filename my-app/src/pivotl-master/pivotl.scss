@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
-
-/*
- * Pivotl borrows heavily from the Foundation grid, with slight modifications.
- * Altered by @seanevd https://github.com/seanevd/pivotl
+/* 
+ * Pivotl borrows heavily from the Foundation grid, with Sass modifications.
+ * Altered by @seanevd
 */
 
 html, body {
   height: 100%; }
+
+$gutterleft: 0.2375rem;
+$gutterright: 0.2375rem;
 
 *,
 *:before,
@@ -124,8 +125,8 @@ select {
 
 .column,
 .columns {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: $gutterleft;
+  padding-right: $gutterright;
   width: 100%;
   float: left; }
 
@@ -245,8 +246,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: $gutterleft;
+    padding-right: $gutterright;
     float: left; }
 
   .small-1 {
@@ -450,8 +451,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: $gutterleft;
+    padding-right: $gutterright;
     float: left; }
 
   .medium-1 {
@@ -751,8 +752,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: $gutterleft;
+    padding-right: $gutterright;
     float: left; }
 
   .large-1 {
@@ -1209,67 +1210,3 @@ blockquote p {
 
   .show-for-print {
     display: inherit !important; } }
-
-
-/* App CSS starts */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.container {
-  background-color: #000000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: 'Arvo', serif;
-}
-.ship {
-  width: 120px;
-}
-.sun {
-  width: 640px;
-  align-self: flex-start;
-  overflow: hidden;
-
-}
-.planets {
-  list-style-type: none;
-}
-.planets li img {
-  width: 160px;
-}
-.planets li {
-  color: #ffffff;
-  font-size: 16px;
-  font-family: 'Arvo', serif;
-  font-weight: 600;
-
-}
-.planets button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -18,22 +18,31 @@ class App extends Component {
       <div className="App">
 
         <div className="container">
-          <div className="ship">
-            <img src={spaceflame}/>
+          <div className="row">
+            <div className="columns medium-3 ship">
+              <img src={spaceflame}/>
+            </div>
+
           </div>
-          <ul className="planets">
-            <button><li><img src={mercury}/>Mercury</li></button>
-            <button><li><img src={venus}/>Venus</li></button>
-            <button><li><img src={earth}/>Earth</li></button>
-            <button><li><img src={mars}/>Mars</li></button>
-            <button><li><img src={jupiter}/>Jupiter</li></button>
-            <button><li><img src={saturn}/>Saturn</li></button>
-            <button><li><img src={uranus}/>Uranus</li></button>
-            <button><li><img src={neptune}/>Neptune</li></button>
-          </ul>
-          <div className="sun">
-            <img src={sun}/>
-          </div>
+          <div className="row">
+            <div className="columns medium-3">
+              <div className="sun">
+                <img src={sun}/>
+              </div>
+            </div>
+            <div className="column medium-9">
+              <ul className="planets">
+                <button><li><img src={mercury}/>Mercury</li></button>
+                <button><li><img src={venus}/>Venus</li></button>
+                <button><li><img src={earth}/>Earth</li></button>
+                <button><li><img src={mars}/>Mars</li></button>
+                <button><li><img src={jupiter}/>Jupiter</li></button>
+                <button><li><img src={saturn}/>Saturn</li></button>
+                <button><li><img src={uranus}/>Uranus</li></button>
+                <button><li><img src={neptune}/>Neptune</li></button>
+              </ul>
+            </div>
+            </div>
         </div>
       </div>
     );
