@@ -1235,24 +1235,30 @@ blockquote p {
   overflow: hidden;
 }
 .ship {
-  width: 160px;
+  width: 200px;
+  position: relative;
+  top: 40px;
 }
 .sun {
   width: 640px;
   overflow: hidden;
   position: absolute;
-  top: 120px;
+  top: -400px;
+  left: -100px;
 
 }
 .planets {
-  list-style-type: none;
   display: flex;
   flex-direction: row;
 }
-.planets li img {
+.planets img {
   width: 160px;
 }
-.planets li {
+
+.planets button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   color: #ffffff;
   font-size: 24px;
   font-family: 'Arvo', serif;
@@ -1263,12 +1269,41 @@ blockquote p {
   margin-right: 24px;
 
 }
-
-.planets button {
-  background-color: transparent;
-  border: none;
+button {
+  position: relative;
   cursor: pointer;
-
+}
+button.mercury {
+  top: 24px;
+}
+button.earth {
+  text-align: center;
+  bottom: 40px;
+}
+button.jupiter {
+  bottom: 80px;
+}
+button.uranus {
+  bottom: 130px;
+}
+button.venus {
+  left: 110px;
+  top: 20px;
+}
+button.mars {
+  left: 100px;
+  bottom: 50px;
+}
+button.saturn {
+  left: 78px;
+  bottom: 100px;
+}
+button.saturn img {
+  width: 240px;
+}
+button.neptune {
+  bottom: 160px;
+  left: 70px;
 }
 
 .App-link {

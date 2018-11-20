@@ -18,39 +18,56 @@ class App extends Component {
       <div className="App">
 
         <div className="container">
-          <div className="row">
-            <div className="columns medium-3 ship medium-pull-1">
-              <img src={spaceflame}/>
-            </div>
+                <div className="row">
+                  
+                  <div className="columns medium-3 ship medium-pull-1">
+                    <img src={spaceflame}/>
+                  </div>
+                </div>
 
-          </div>
-          <div className="row">
-            <div className="columns medium-3 medium-pull-6">
-              <div className="sun">
-                <img src={sun}/>
+                  <div className='row planets'>
+                  <div className='columns small-12'>
+                    <div className='column medium-3 medium-push-2'>
+                      <button className='mercury'><img src={mercury}/>Mercury</button>
+                    </div>
+                    <div className='column medium-3 medium-push-2'>
+                      <button className='earth'><img src={earth}/>Earth</button>
+                    </div>
+                    <div className='column medium-3 medium-push-2'>
+                      <button className='jupiter'><img src={jupiter}/>Jupiter</button>
+                    </div>
+                    <div className='column medium-3 medium-push-2'>
+                      <button className='uranus'><img src={uranus}/>Uranus</button>
+                    </div>
+
+                    </div>
+                  </div>
+
+                <div className='row planets'>
+                  <div className='columns small-12'>
+                  <div className='column medium-3 medium-push-2'>
+                    <button className='venus'><img src={venus}/>Venus</button>
+                  </div>
+                  <div className='column medium-3 medium-push-2'>
+                    <button className='mars'><img src={mars}/>Mars</button>
+                  </div>
+                  <div className='column medium-3 medium-push-2'>
+                    <button className='saturn'><img src={saturn}/>Saturn</button>
+                  </div>
+                  <div className='column medium-3 medium-push-2'>
+                    <button className='neptune'><img src={neptune}/>Neptune</button>
+                  </div>
+                </div>
               </div>
-            </div>
-
-              <ul className="planets">
-                <div className='row'>
-                <div className='columns medium-12 medium-push-3'>
-                <button><li><img src={mercury}/>Mercury</li></button>
-                <button><li><img src={venus}/>Venus</li></button>
-                <button><li><img src={earth}/>Earth</li></button>
-                <button><li><img src={mars}/>Mars</li></button>
+              <div className="row">
+                <div className="columns medium-3 medium-pull-6">
+                  <div className="sun">
+                    <img src={sun}/>
+                  </div>
                 </div>
-                </div>
-                <div className='row'>
-                <div className='columns medium-12 medium-push-1'>
-                <button><li><img src={jupiter}/>Jupiter</li></button>
-                <button><li><img src={saturn}/>Saturn</li></button>
-                <button><li><img src={uranus}/>Uranus</li></button>
-                <button><li><img src={neptune}/>Neptune</li></button>
-                </div>
-                </div>
-              </ul>
-            </div>
         </div>
+              </div>
+
       </div>
     );
   }
