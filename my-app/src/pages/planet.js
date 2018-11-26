@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import ReactDOM from "react-dom";
 import Modal from './modal.js'
 
 
@@ -7,7 +6,10 @@ class Planet extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {planetShowing: false}
+      this.state = {
+        planetShowing: false,
+        meta: ''
+      }
     }
 
     componentDidMount() {
@@ -32,8 +34,12 @@ class Planet extends Component {
 
     state = { show: false };
 
-    showModal = () => {
-      this.setState({ show: true });
+    showModal = (data) => {
+      console.log(data);
+      this.setState({
+        show: true,
+        meta: data
+      });
     };
 
     hideModal = () => {
@@ -41,22 +47,24 @@ class Planet extends Component {
     };
 
   render() {
+    console.log(this.props)
     return (
       <div className="mother">
       <h1>React Modal</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-          <p>Data</p>
+        <Modal show={this.state.show} handleClose={this.hideModal} shouldCloseOnOverlayClick={false}>
+          <p className="planetName">{this.props.planet.name}</p>
+          <p>
+          {this.state.meta}
+          </p>
         </Modal>
 
         <div className={`Planet ${this.state.planetShowing ? 'show' : 'hidden'}`}>
           <div className="row">
-            <ul className="planet-info columns medium-8 medium-push-4">
-              <li><button type="button" onClick={this.showModal}>Something</button></li>
-              <li><button type="button" onClick={this.showModal}>Something</button></li>
-              <li><button type="button" onClick={this.showModal}>Something</button></li>
-              <li><button type="button" onClick={this.showModal}>Something</button></li>
-              <li><button type="button" onClick={this.showModal}>Something</button></li>
+            <ul className="planet-info columns medium-8 medium-push-10">
+              <li><button type="button" onClick={this.showModal.bind(this, this.props.planet.attributes.size)}>Size</button></li>
+              <li><button type="button" onClick={this.showModal.bind(this, this.props.planet.attributes.distance)}>Distance</button></li>
+              <li><button type="button" onClick={this.showModal.bind(this, this.props.planet.attributes.atmosphere)}>Atmosphere</button></li>
+              <li><button type="button" onClick={this.showModal.bind(this, this.props.planet.attributes.orbit)}>Orbit</button></li>
             </ul>
           </div>
         </div>
@@ -67,6 +75,3 @@ class Planet extends Component {
 }
 
 export default Planet;
-// const container = document.createElement("div");
-// document.body.appendChild(container);
-// ReactDOM.render(<Planet />, container);
