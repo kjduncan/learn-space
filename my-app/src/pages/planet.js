@@ -50,8 +50,7 @@ class Planet extends Component {
     console.log(this.props)
     return (
       <div className="mother">
-      <h1>React Modal</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal} shouldCloseOnOverlayClick={false}>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
           <p className="planetName">{this.props.planet.name}</p>
           <p>
           {this.state.meta}

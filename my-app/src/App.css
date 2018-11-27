@@ -1238,6 +1238,7 @@ blockquote p {
   width: 200px;
   position: relative;
   top: 40px;
+  z-index: 10000;
 }
 
 .bounce {

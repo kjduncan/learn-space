@@ -129,8 +129,9 @@ class Home extends Component {
         return classNames(
           planetName.toLowerCase(),
           {
-            'planet-fly': this.state.selectedPlanet.name!==planetName && this.state.selectedPlanet.name !== undefined,
-            'planet-selected': this.state.selectedPlanet.name===planetName
+            'planet-fly': this.state.selectedPlanet.name!==planetName && this.state.selectedPlanet.name !== undefined && this.state.selectedPlanet.name !== planets[8].name,
+            'planet-selected': this.state.selectedPlanet.name===planetName,
+            'planet-return': this.state.selectedPlanet.name===planets[8].name
           })
       }
     return (
@@ -140,7 +141,7 @@ class Home extends Component {
                 <div className="row">
 
                   <div className="columns medium-3 ship medium-pull-1 bounce">
-                    <img src={spaceflame}/>
+                    <img onClick={() => {this.selectedPlanet(planets[8])}} src={spaceflame}/>
                   </div>
                 </div>
 
@@ -187,7 +188,7 @@ class Home extends Component {
         </div>
               </div>
               {
-                this.state.planetOpen &&
+                this.state.planetOpen && this.state.selectedPlanet.name !== planets[8].name &&
                   <Planet planet={this.state.selectedPlanet} />
               }
       </div>
