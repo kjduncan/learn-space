@@ -138,6 +138,9 @@ class Home extends Component {
       <div className="Home">
 
         <div className="container">
+                <div className="stars-bg-xs"></div>
+                <div className="stars-bg-md"></div>
+                <div className="stars-bg-lg"></div>
                 <div className="row">
 
                   <div className="columns medium-3 ship medium-pull-1 bounce">
