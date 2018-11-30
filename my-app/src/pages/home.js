@@ -12,6 +12,8 @@ import spaceflame from '../images/spaceshipFlame.svg';
 import Planet from './planet.js';
 import classNames from 'classnames'
 
+
+/*facts from https://space-facts.com/planets/*/ 
 let planets = [
     {
       name: 'Mercury',

@@ -1271,9 +1271,6 @@ blockquote p {
   display: flex;
   flex-direction: row;
 }
-.planets img {
-  width: 160px;
-}
 
 .planets button {
   background-color: transparent;
@@ -1294,17 +1291,17 @@ button {
   cursor: pointer;
 }
 button.mercury {
-  top: 24px;
+  top: 48px;
 }
 button.earth {
   text-align: center;
   bottom: 40px;
 }
 button.jupiter {
-  bottom: 80px;
+  bottom: 104px;
 }
 button.uranus {
-  bottom: 130px;
+  bottom: 152px;
 }
 button.venus {
   left: 110px;
@@ -1312,18 +1309,40 @@ button.venus {
 }
 button.mars {
   left: 100px;
-  bottom: 50px;
+  bottom: 20px;
 }
 button.saturn {
   left: 78px;
   bottom: 100px;
 }
+button.neptune {
+  bottom: 160px;
+  left: 64px;
+}
+button.mercury img {
+  width: 64px;
+}
+button.earth img {
+  width: 120px;
+}
+button.jupiter img {
+  bottom: 80px;
+  width: 300px;
+}
+button.uranus img{
+  width: 180px;
+}
+button.venus img{
+  width: 120px;
+}
+button.mars img{
+  width: 80px;
+}
 button.saturn img {
   width: 240px;
 }
-button.neptune {
-  bottom: 160px;
-  left: 70px;
+button.neptune img{
+  width: 180px;
 }
 
 .App-link {
@@ -1336,7 +1355,7 @@ button.neptune {
   position: absolute;
 }
 button.planet-selected {
-  top: 960px;
+  top: 300px;
   transform: scale(10, 10);
 }
 .planets button {
@@ -1499,7 +1518,7 @@ ul.planet-info button:hover {
   display: none;
 }
 
-/* stars */
+/* stars pulled from http://wishy-washy.azurewebsites.net/ with permission from author */
 
 .stars-bg-xs {
   width: 1px;
