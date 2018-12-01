@@ -13,7 +13,7 @@ import Planet from './planet.js';
 import classNames from 'classnames'
 
 
-/*facts from https://space-facts.com/planets/*/ 
+/*facts from https://space-facts.com/planets/*/
 let planets = [
     {
       name: 'Mercury',
@@ -96,6 +96,9 @@ let planets = [
             },
             {
               name: 'Sun'
+            },
+            {
+              name: 'Title'
             }
 ];
 
@@ -145,8 +148,13 @@ class Home extends Component {
                 <div className="stars-bg-lg"></div>
                 <div className="row">
 
-                  <div className="columns medium-3 ship medium-pull-1 bounce">
-                    <img onClick={() => {this.selectedPlanet(planets[8])}} src={spaceflame}/>
+                  <div className="columns medium-3 medium-pull-1 ship bounce">
+
+                      <img onClick={() => {this.selectedPlanet(planets[8])}} src={spaceflame}/>
+
+                  </div>
+                  <div className="columns medium-8 medium-pull-3">
+                    <h1 className={planetStyle(planets[9].name)}>Lets Explore Space</h1>
                   </div>
                 </div>
 

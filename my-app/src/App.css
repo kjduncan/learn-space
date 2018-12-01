@@ -1241,6 +1241,7 @@ blockquote p {
   z-index: 10000;
 }
 
+
 .bounce {
     animation: bounce 3s;
     animation-delay: 1s;
@@ -1344,6 +1345,12 @@ button.saturn img {
 button.neptune img{
   width: 180px;
 }
+h1 {
+  position: relative;
+  top: 80px;
+  font-weight: 500;
+  font-size: 48px;
+}
 
 .App-link {
   color: #61dafb;
@@ -1355,7 +1362,7 @@ button.neptune img{
   position: absolute;
 }
 button.planet-selected {
-  top: 300px;
+  top: 500px;
   transform: scale(10, 10);
 }
 .planets button {
@@ -1400,6 +1407,13 @@ button:focus {
 .sun.planet-fly {
   transform: translateX(-500px) translateY(-500px);
   overflow: hidden;
+}
+.title.planet-fly {
+  transform: translateX(-500px) translateY(-500px);
+  overflow: hidden;
+}
+.ship.planet-fly {
+  transform: matrix(0, 0, 0, 0, 900px, 0);
 }
 ul.planet-info {
   list-style-type: none;
