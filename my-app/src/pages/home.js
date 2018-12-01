@@ -138,7 +138,14 @@ class Home extends Component {
             'planet-selected': this.state.selectedPlanet.name===planetName,
             'planet-return': this.state.selectedPlanet.name===planets[8].name
           })
-      }
+      };
+      var rocketStyle = classNames(
+        {
+          'blast-off': this.state.selectedPlanet && this.state.selectedPlanet.name,
+        },
+         'ship', 'bounce',
+
+      );
     return (
       <div className="Home">
 
@@ -148,7 +155,7 @@ class Home extends Component {
                 <div className="stars-bg-lg"></div>
                 <div className="row">
 
-                  <div className="columns medium-3 medium-pull-1 ship bounce">
+                  <div className={rocketStyle}>
 
                       <img onClick={() => {this.selectedPlanet(planets[8])}} src={spaceflame}/>
 
@@ -158,36 +165,36 @@ class Home extends Component {
                   </div>
                 </div>
 
-                  <div className='row planets'>
-                  <div className='columns small-12'>
-                    <div className='column medium-3 medium-push-2'>
+                  <div className=' planets'>
+                  <div className=''>
+                    <div className=''>
                       <button onClick={() => {this.selectedPlanet(planets[0])}} className={planetStyle(planets[0].name)}><img src={mercury}/>Mercury</button>
                     </div>
-                    <div className='column medium-3 medium-push-2'>
+                    <div className=''>
                       <button onClick={() => {this.selectedPlanet(planets[1])}} className={planetStyle(planets[1].name)}><img src={earth}/>Earth</button>
                     </div>
-                    <div className='column medium-3 medium-push-2'>
+                    <div className=''>
                       <button onClick={() => {this.selectedPlanet(planets[2])}} className={planetStyle(planets[2].name)}><img src={jupiter}/>Jupiter</button>
                     </div>
-                    <div className='column medium-3 medium-push-2'>
+                    <div className=''>
                       <button onClick={() => {this.selectedPlanet(planets[3])}} className={planetStyle(planets[3].name)}><img src={uranus}/>Uranus</button>
                     </div>
 
                     </div>
                   </div>
 
-                <div className='row planets'>
-                  <div className='columns small-12'>
-                  <div className='column medium-3 medium-push-2'>
+                <div className='planets'>
+                  <div className=''>
+                  <div className=''>
                     <button onClick={() => {this.selectedPlanet(planets[4])}} className={planetStyle(planets[4].name)}><img src={venus}/>Venus</button>
                   </div>
-                  <div className='column medium-3 medium-push-2'>
+                  <div className=''>
                     <button onClick={() => {this.selectedPlanet(planets[5])}} className={planetStyle(planets[5].name)}><img src={mars}/>Mars</button>
                   </div>
-                  <div className='column medium-3 medium-push-2'>
+                  <div className=''>
                     <button onClick={() => {this.selectedPlanet(planets[6])}} className={planetStyle(planets[6].name)}><img src={saturn}/>Saturn</button>
                   </div>
-                  <div className='column medium-3 medium-push-2'>
+                  <div className=''>
                     <button onClick={() => {this.selectedPlanet(planets[7])}} className={planetStyle(planets[7].name)}><img src={neptune}/>Neptune</button>
                   </div>
                 </div>

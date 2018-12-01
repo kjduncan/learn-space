@@ -6,7 +6,8 @@
 */
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 *,
 *:before,
@@ -1230,12 +1231,11 @@ blockquote p {
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Arvo', serif;
-  position: relative;
   overflow: hidden;
   transition: background .3s linear 0s;
 }
 .ship {
-  width: 200px;
+  width: 160px;
   position: relative;
   top: 40px;
   z-index: 10000;
@@ -1244,7 +1244,6 @@ blockquote p {
 
 .bounce {
     animation: bounce 3s;
-    animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -1261,11 +1260,11 @@ blockquote p {
     }
 }
 .sun {
-  width: 640px;
+  width: 1200px;
   overflow: hidden;
   position: absolute;
-  top: -400px;
-  left: -100px;
+  top: -200px;
+  left: -700px;
 
 }
 .planets {
@@ -1285,71 +1284,87 @@ blockquote p {
   flex-direction: column;
   margin-bottom: 64px;
   margin-right: 24px;
+  align-items: center;
 
 }
+.planets button img {
+  width: 240px;
+  max-width: none;
+}
 button {
-  position: relative;
+  position: absolute;
   cursor: pointer;
+  text-align: center;
 }
 button.mercury {
-  top: 48px;
+  top: 88%;
+  left: 20%;
 }
 button.earth {
   text-align: center;
-  bottom: 40px;
+  top: 75%;
+  left: 30%;
+  z-index: 2000;
 }
 button.jupiter {
-  bottom: 104px;
+  top: 15%;
+  left: 30%;
 }
 button.uranus {
-  bottom: 152px;
+  top: 15%;
+  left: 72%;
+  z-index: 1000;
 }
 button.venus {
-  left: 110px;
-  top: 20px;
+  top: 80%;
+  left: 25%;
 }
 button.mars {
-  left: 100px;
-  bottom: 20px;
+  top: 73%;
+  left: 35%;
 }
 button.saturn {
-  left: 78px;
-  bottom: 100px;
+  top: 15%;
+  left: 50%;
 }
 button.neptune {
-  bottom: 160px;
-  left: 64px;
+  top: 5%;
+  left: 82%;
+  z-index: 10001;
 }
 button.mercury img {
-  width: 64px;
+  width: calc(240px * .08);
 }
 button.earth img {
-  width: 120px;
+  width: calc(240px * .26);
 }
 button.jupiter img {
-  bottom: 80px;
-  width: 300px;
+  width: calc(240px * 2.84);
 }
 button.uranus img{
-  width: 180px;
+  width: calc(240px * 1.03);
 }
 button.venus img{
-  width: 120px;
+  width: calc(240px * .25);
+
 }
 button.mars img{
-  width: 80px;
+  width: calc(240px * .1);
 }
 button.saturn img {
-  width: 240px;
+  width: calc(240px * 2.34);
 }
 button.neptune img{
-  width: 180px;
+
 }
 h1 {
   position: relative;
-  top: 80px;
+  top: -200px;
   font-weight: 500;
   font-size: 48px;
+  left: 0;
+  width: 200px;
+  text-align: left;
 }
 
 .App-link {
@@ -1361,9 +1376,83 @@ h1 {
   top: 0;
   position: absolute;
 }
+.blast-off {
+  animation-name: blast;
+  animation-duration: 3.2s;
+  position: absolute;
+
+}
+@keyframes blast {
+  0% {
+    transform: rotate(0deg) translateY(0) translateX(0);
+  }
+  10% {
+    transform: rotate(30deg) translateY(0) translateX(0);
+  }
+  30% {
+    transform: rotate(40deg) translateY(-600px) translateX(200px);
+  }
+  30.5% {
+    transform: rotate(0deg) translateY(-9999px) translateX(9999px);
+  }
+  31% {
+    transform: rotate(0deg) translateY(9999px) translateX(9999px);
+    z-index: -1;
+  }
+  32% {
+    transform: rotate(0deg) translateY(800px) translateX(300px);
+  }
+  65% {
+    transform: rotate(0deg) translateY(-50px) translateX(300px);
+
+  }
+  100% {
+    transform: rotate(-20deg) translateY(200px) translateX(200px);
+    z-index: 1;
+  }
+}
 button.planet-selected {
   top: 500px;
   transform: scale(10, 10);
+}
+button.planet-selected.jupiter {
+  top: 600px;
+  transform: scale(2, 2);
+}
+button.planet-selected.saturn {
+  top: 600px;
+  left: 40%;
+  transform: scale(2.5, 2.5);
+}
+button.planet-selected.uranus {
+  top: 800px;
+  left: 40%;
+  transform: scale(5, 5);
+}
+button.planet-selected.neptune{
+  top: 800px;
+  left: 40%;
+  transform: scale(5, 5);
+}
+button.planet-selected.mars{
+  top: 1300px;
+  left: 50%;
+  transform: scale(40, 40);
+}
+button.planet-selected.earth{
+  top: 1200px;
+  left: 50%;
+  transform: scale(20, 20);
+}
+button.planet-selected.venus{
+  top: 1200px;
+  left: 50%;
+  transform: scale(20, 20);
+}
+button.planet-selected.mercury{
+  top: 1800px;
+  left: 50%;
+  transform: scale(60, 60);
 }
 .planets button {
   transition: all 1s ease-in-out;
@@ -1397,7 +1486,7 @@ button:focus {
   overflow: hidden;
 }
 .jupiter.planet-fly {
-  transform: translateX(-300px) translateY(-500px);
+  transform: translateX(-300px) translateY(-900px);
   overflow: hidden;
 }
 .neptune.planet-fly {
@@ -1412,9 +1501,7 @@ button:focus {
   transform: translateX(-500px) translateY(-500px);
   overflow: hidden;
 }
-.ship.planet-fly {
-  transform: matrix(0, 0, 0, 0, 900px, 0);
-}
+
 ul.planet-info {
   list-style-type: none;
   color: #ffffff;
@@ -1422,6 +1509,8 @@ ul.planet-info {
   flex-direction: column;
   align-items: flex-start;
   padding: 48px;
+  height: 320px;
+  justify-content: space-between;
 }
 ul.planet-info li {
   margin-bottom: 16px;
