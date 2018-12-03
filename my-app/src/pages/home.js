@@ -126,6 +126,7 @@ class Home extends Component {
           }, 1000)
         }
       );
+      
       }
   render() {
     console.warn(this.state.selectedPlanet);
@@ -142,6 +143,7 @@ class Home extends Component {
       var rocketStyle = classNames(
         {
           'blast-off': this.state.selectedPlanet && this.state.selectedPlanet.name,
+          'blast-return': this.state.selectedPlanet.name===planets[8].name
         },
          'ship', 'bounce',
 

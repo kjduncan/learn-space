@@ -1379,6 +1379,8 @@ h1 {
 .blast-off {
   animation-name: blast;
   animation-duration: 3.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
   position: absolute;
 
 }
@@ -1408,6 +1410,26 @@ h1 {
   }
   100% {
     transform: rotate(-20deg) translateY(200px) translateX(200px);
+    z-index: 19999;
+  }
+}
+.blast-return {
+  animation-name: return;
+  animation-duration: 3.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  position: absolute;
+}
+@keyframes retun {
+  0% {
+    transform: rotate(-20deg) translateY(200px) translateX(200px);
+    z-index: 1;
+  }
+  50% {
+      transform: rotate(-10deg) translateY(-100px) translateX(-100px);
+  }
+  100% {
+    transform: rotate(0) translateY(0) translateX(0);
     z-index: 1;
   }
 }
