@@ -110,24 +110,31 @@ class Home extends Component {
       super(props);
       this.state = {
         selectedPlanet:{},
-        planetOpen: false
+        planetOpen: false,
+        tempClassAdded: false
       };
       }
 
       selectedPlanet = (planet) => {
         this.setState({
           selectedPlanet: planet,
+          tempClassAdded: true
         },
         () => {
           setTimeout(() => {
             this.setState({
               planetOpen: true
             })
+            setTimeout(() => {
+              this.setState({
+                tempClassAdded: false
+              });
+            }, 5000);
           }, 1000)
         }
       );
-
       }
+
   render() {
     console.warn(this.state.selectedPlanet);
     console.warn(this.state.planetOpen);
@@ -143,7 +150,8 @@ class Home extends Component {
       var rocketStyle = classNames(
         {
           'blast-off': this.state.selectedPlanet && this.state.selectedPlanet.name,
-          'blast-return': this.state.selectedPlanet.name===planets[8].name
+          'blast-return': this.state.selectedPlanet.name===planets[8].name,
+          'blast-sample' : this.state.tempClassAdded
         },
          'ship', 'bounce',
 
