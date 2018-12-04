@@ -111,28 +111,29 @@ class Home extends Component {
       this.state = {
         selectedPlanet:{},
         planetOpen: false,
-        tempClassAdded: false
       };
       }
 
       selectedPlanet = (planet) => {
         this.setState({
           selectedPlanet: planet,
-          tempClassAdded: true
         },
         () => {
-          setTimeout(() => {
-            this.setState({
-              planetOpen: true
-            })
+          if (this.state.selectedPlanet.name === planets[8].name) {
             setTimeout(() => {
               this.setState({
-                tempClassAdded: false
+                selectedPlanet: {},
+                planetOpen: false
+              })
+            }, 1000);
+          } else {
+            setTimeout(() => {
+              this.setState({
+                planetOpen: true
               });
-            }, 5000);
-          }, 1000)
-        }
-      );
+            }, 1000);
+          }
+        });
       }
 
   render() {
@@ -149,9 +150,8 @@ class Home extends Component {
       };
       var rocketStyle = classNames(
         {
-          'blast-off': this.state.selectedPlanet && this.state.selectedPlanet.name,
-          'blast-return': this.state.selectedPlanet.name===planets[8].name,
-          'blast-sample' : this.state.tempClassAdded
+          'blast-off': this.state.selectedPlanet && this.state.selectedPlanet.name && this.state.selectedPlanet.name != planets[8].name,
+          'blast-return': this.state.selectedPlanet.name === planets[8].name
         },
          'ship', 'bounce',
 

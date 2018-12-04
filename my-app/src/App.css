@@ -1285,17 +1285,11 @@ blockquote p {
   margin-bottom: 64px;
   margin-right: 24px;
   align-items: center;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  /* animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-
+  animation-iteration-count: infinite; */
 }
-.planets button:hover {
+/* .planets button:hover {
   cursor: pointer;
  animation-name: bouncePlanet;
  -moz-animation-name: bouncePlanet;
@@ -1316,7 +1310,7 @@ blockquote p {
 		-ms-transform:     translateY(-15px);
 		transform:         translateY(-15px)
 	}
-}
+} */
 .planets button img {
   width: 240px;
   max-width: none;
@@ -1325,42 +1319,51 @@ button {
   position: absolute;
   cursor: pointer;
   text-align: center;
+
 }
 button.mercury {
   top: 88%;
   left: 20%;
+  transform: scale(1, 1);
 }
 button.earth {
   text-align: center;
   top: 75%;
   left: 30%;
   z-index: 2000;
+  transform: scale(1, 1);
 }
 button.jupiter {
   top: 15%;
   left: 30%;
+  transform: scale(1, 1);
 }
 button.uranus {
   top: 15%;
   left: 72%;
   z-index: 1000;
+  transform: scale(1, 1);
 }
 button.venus {
   top: 80%;
   left: 25%;
+  transform: scale(1, 1);
 }
 button.mars {
   top: 73%;
   left: 35%;
+  transform: scale(1, 1);
 }
 button.saturn {
   top: 15%;
   left: 50%;
+  transform: scale(1, 1);
 }
 button.neptune {
   top: 5%;
   left: 82%;
   z-index: 10001;
+  transform: scale(1, 1);
 }
 button.mercury img {
   width: calc(240px * .08);
@@ -1517,6 +1520,7 @@ button.planet-selected.mercury{
 }
 .planets button {
   transition: all 1s ease-in-out;
+  transform: scale(1, 1);
   /* transition-property: transform; */
 }
 button:focus {
