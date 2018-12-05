@@ -1,9 +1,9 @@
 {
-  "main.css": "/learn-space/static/css/main.49e756ce.chunk.css",
-  "main.js": "/learn-space/static/js/main.32701da2.chunk.js",
-  "main.js.map": "/learn-space/static/js/main.32701da2.chunk.js.map",
-  "static/js/1.7b4e03f3.chunk.js": "/learn-space/static/js/1.7b4e03f3.chunk.js",
-  "static/js/1.7b4e03f3.chunk.js.map": "/learn-space/static/js/1.7b4e03f3.chunk.js.map",
+  "main.css": "/learn-space/static/css/main.1e6f057f.chunk.css",
+  "main.js": "/learn-space/static/js/main.a2b0673e.chunk.js",
+  "main.js.map": "/learn-space/static/js/main.a2b0673e.chunk.js.map",
+  "static/js/1.d25e39bb.chunk.js": "/learn-space/static/js/1.d25e39bb.chunk.js",
+  "static/js/1.d25e39bb.chunk.js.map": "/learn-space/static/js/1.d25e39bb.chunk.js.map",
   "runtime~main.js": "/learn-space/static/js/runtime~main.3c8d8e95.js",
   "runtime~main.js.map": "/learn-space/static/js/runtime~main.3c8d8e95.js.map",
   "static/media/Mercury.svg": "/learn-space/static/media/Mercury.f8aa06fe.svg",
@@ -16,8 +16,8 @@
   "static/media/neptune.svg": "/learn-space/static/media/neptune.17aac410.svg",
   "static/media/sun.svg": "/learn-space/static/media/sun.47738ae5.svg",
   "static/media/spaceshipFlame.svg": "/learn-space/static/media/spaceshipFlame.bbd6b63b.svg",
-  "static/css/main.49e756ce.chunk.css.map": "/learn-space/static/css/main.49e756ce.chunk.css.map",
+  "static/css/main.1e6f057f.chunk.css.map": "/learn-space/static/css/main.1e6f057f.chunk.css.map",
   "index.html": "/learn-space/index.html",
-  "precache-manifest.00a322e2c78681b3edba53e702b68aaf.js": "/learn-space/precache-manifest.00a322e2c78681b3edba53e702b68aaf.js",
+  "precache-manifest.a4b914fd78d75cef4ce3a726b27c5b89.js": "/learn-space/precache-manifest.a4b914fd78d75cef4ce3a726b27c5b89.js",
   "service-worker.js": "/learn-space/service-worker.js"
 }

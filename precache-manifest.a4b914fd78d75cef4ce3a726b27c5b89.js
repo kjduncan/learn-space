@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "32701da2658937ca309e",
-    "url": "/learn-space/static/css/main.49e756ce.chunk.css"
+    "revision": "a2b0673e1be0c0c9dcd9",
+    "url": "/learn-space/static/css/main.1e6f057f.chunk.css"
   },
   {
-    "revision": "32701da2658937ca309e",
-    "url": "/learn-space/static/js/main.32701da2.chunk.js"
+    "revision": "a2b0673e1be0c0c9dcd9",
+    "url": "/learn-space/static/js/main.a2b0673e.chunk.js"
   },
   {
-    "revision": "7b4e03f3089cff08d1e6",
-    "url": "/learn-space/static/js/1.7b4e03f3.chunk.js"
+    "revision": "d25e39bb50f46267b779",
+    "url": "/learn-space/static/js/1.d25e39bb.chunk.js"
   },
   {
     "revision": "3c8d8e954f096ba97ad5",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/learn-space/static/media/spaceshipFlame.bbd6b63b.svg"
   },
   {
-    "revision": "8a0193e9e6cdfb8206a4eea84709e277",
+    "revision": "14dd796b7971887a177621b39240dd07",
     "url": "/learn-space/index.html"
   }
 ];
