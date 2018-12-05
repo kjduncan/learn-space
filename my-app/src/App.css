@@ -1531,7 +1531,7 @@ button:focus {
   overflow: hidden;
 }
 .earth.planet-fly {
-  transform: translateX(200px) translateY(-800px);
+  transform: translateX(200px) translateY(-1000px);
   overflow: hidden;
 }
 .mercury.planet-fly {
@@ -1539,7 +1539,7 @@ button:focus {
   overflow: hidden;
 }
 .venus.planet-fly {
-  transform: translateX(800px) translateY(-800px);
+  transform: translateX(800px) translateY(-1000px);
   overflow: hidden;
 }
 .uranus.planet-fly {
